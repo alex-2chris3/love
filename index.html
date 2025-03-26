@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para mi Tomatito</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fff0f0, #ffdede);
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ffb3b3;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #b10000;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 1000px;
+      height: 700px;
+      margin: 40px auto;
+    }
+
+    .video-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .video-center video {
+      width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(214, 40, 40, 0.3);
+    }
+
+    .frase-central {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 1.1em;
+      color: #b10000;
+      font-style: italic;
+    }
+
+    .item {
+      position: absolute;
+      width: 200px;
+      max-width: 90%;
+    }
+
+    .item img {
+      width: 100%;
+      border: 5px solid #d62828;
+      border-radius: 15px;
+      box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .text-box {
+      background-color: #fffafa;
+      border-left: 5px solid #e63946;
+      padding: 15px;
+      border-radius: 15px;
+      font-size: 0.95em;
+      color: #444;
+      font-style: italic;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    /* Posiciones flotantes corregidas */
+.item1 { top: 20px; left: 20px; }
+.item2 { top: 40px; right: 20px; }
+.item3 { bottom: -30px; left: 30px; }
+.item4 { bottom: 20px; right: 40px; }
+.item5 { top: 200px; left: -30px; width: 230px; }
+.item6 { top: 320px; left: 110px; }
+.item7 { bottom: 95px; right: 850px; }
+
+    .button-container {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .button-container button {
+      background-color: #d62828;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .button-container button:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Para la casualidad más bonita</h1>
+  </header>
+
+  <div class="container">
+    <!-- Video central -->
+    <div class="video-center">
+      <video src="vid2.mp4" controls></video>
+      <div class="frase-central">Sé que mis locuras combinan con las tuyas</div>
+    </div>
+
+    <!-- Elementos flotantes -->
+    <div class="item item1">
+      <div class="text-box">Es increíble pensar que en tan solo 24 horas conocí a una persona tan especial.</div>
+    </div>
+
+    <div class="item item2">
+      <img src="img1.JPG" alt="Imagen 1">
+    </div>
+
+    <div class="item item3">
+      <div class="text-box">Esa sonrisa tan preciosa que hace que todo valga la pena.</div>
+    </div>
+
+    <div class="item item4">
+      <img src="img2.jpeg" alt="Imagen 2">
+    </div>
+
+    <div class="item item5">
+      <div class="text-box">Y ese ingenio tan increíble para lograr lo que te propones, te hace única.</div>
+    </div>
+
+    <div class="item item6">
+        <div class="text-box">Aunque me mata de las iras, sé que esa pelinegra es con quien quiero estar.</div>
+      </div>
+      
+      <div class="item item7">
+        <div class="text-box">Si de algo estoy seguro, es que aunque pueda dar terror, quiero arriesgarme a conocerte porque siento que como tú no hay dos.</div>
+      </div>
+      
+  </div>
+
+  <div class="button-container">
+    <a href="Next.html">
+      <button>Dale Clic ❤️</button>
+    </a>
+  </div>
+
+</body>
+</html>
