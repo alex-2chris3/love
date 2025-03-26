@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Un Mensaje Especial</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #fff0f0, #ffdede);
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      color: #b10000;
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 250px;
+      max-width: 80vw;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(214, 40, 40, 0.3);
+    }
+
+    .sweet-text {
+      margin-top: 20px;
+      max-width: 500px;
+      background-color: #fffafa;
+      padding: 18px;
+      border-left: 6px solid #e63946;
+      border-radius: 15px;
+      color: #444;
+      font-size: 0.95em;
+      font-style: italic;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Confetti */
+    .confetti {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  opacity: 0.8;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  animation: fall linear infinite;
+}
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="center-container">
+    <h2>Para que lo recuerdes...</h2>
+
+    <video src="vid1.mp4" controls></video>
+
+    <div class="sweet-text">
+      Estoy tan orgulloso de ti, de tu dedicación y del amor que pones en todo lo que haces. Me llena de intriga imaginar todo lo que vas a lograr, y aún me quedan tantas cosas por descubrir de ti. Quiero hacerlo... y espero que me permitas conocerte más, para darte la oportunidad de ser la niña más feliz del mundo. Sé que no se llega a la meta con un solo intento, pero esta vez... quiero intentarlo contigo, y lograrlo juntos.
+    </div>
+  </div>
+
+  <!-- Confetti -->
+  <script>
+    const colors = ['#ff6b6b', '#feca57', '#54a0ff', '#1dd1a1', '#f368e0'];
+  
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      confetti.style.animationDelay = Math.random() * 3 + 's';
+      document.body.appendChild(confetti);
+  
+      // Eliminar el confeti después de caer
+      setTimeout(() => {
+        confetti.remove();
+      }, 6000);
+    }
+  
+    // Crear varios confetis con un intervalo
+    setInterval(() => {
+      for (let i = 0; i < 5; i++) {
+        createConfetti();
+      }
+    }, 500);
+  </script>  
+
+</body>
+</html>
